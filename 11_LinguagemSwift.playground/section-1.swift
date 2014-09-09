@@ -201,7 +201,7 @@ for caracter in stringEntrada {
     case "a", "e", "i", "o", "u", " ":
         continue
     default:
-        stringSaida += caracter
+        stringSaida.append(caracter)
     }
 }
 println(stringSaida)
@@ -257,7 +257,7 @@ loopTexto: for letra in textoEntrada {
     case "r":
         break loopTexto
     default:
-        textoSaida += letra
+        textoSaida.append(letra)
     }
 }
 println(textoSaida)

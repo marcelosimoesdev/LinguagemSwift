@@ -78,10 +78,8 @@ println("cidade possui \(countElements(cidade)) caracteres")
 var texto = "Quem é"
 var interrogacao: Character = "?"
 
-println(texto + interrogacao)
-texto += interrogacao // texto = texto + interrogacao
-
-// interrogacao += "!" -> ERRO
+texto.append(interrogacao)
+println(texto)
 
 
 
