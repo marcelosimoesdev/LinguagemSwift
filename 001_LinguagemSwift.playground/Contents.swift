@@ -1,6 +1,5 @@
 /*
     Conceitos:
-
         - Variáveis x Constantes
         - Imprimir valores no console
         - Concatenação de valores
@@ -14,6 +13,6 @@ var nomeFuncionario = "Pedro"
 
 salario = 2_000.00
 
-println(salario)
+print(salario)
 
-println("O salário do \(nomeFuncionario) é \(moeda) \(salario)")
+print("O salário do \(nomeFuncionario) é \(moeda) \(salario)")
