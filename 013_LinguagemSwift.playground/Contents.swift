@@ -1,11 +1,8 @@
 // Apple Swift Tutorial - Do básico ao avançado (Parte 13)
-
 // Functions (Funções 2/2)
 
 
-
 // Tipos das funções
-
 func somar(numero1: Int, numero2: Int) -> Int {
     
     return numero1 + numero2
@@ -31,10 +28,9 @@ contaMatematica2(2, 3)
 
 
 // Funções como parâmetros
-
-func imprimirResultadoConta(funcaoMatematica: (Int, Int) -> Int, numero1: Int, numero2: Int) {
+func imprimirResultadoConta(_ funcaoMatematica: (Int, Int) -> Int, _ numero1: Int, _ numero2: Int) {
     
-    println("Resultado da operação: \(funcaoMatematica(numero1, numero2))")
+    print("Resultado da operação: \(funcaoMatematica(numero1, numero2))")
 }
 
 imprimirResultadoConta(multiplicar, 5, 5)
@@ -43,8 +39,7 @@ imprimirResultadoConta(somar, 5, 5)
 
 
 // Funções como retorno e funções aninhadas
-
-func escolherFuncao(valorAtual: Int) -> (Int) -> Int {
+func escolherFuncao(_ valorAtual: Int) -> (Int) -> Int {
     
     func aumentar(numero: Int) -> Int {
         return numero + 1
@@ -63,9 +58,9 @@ let moverParaZero = escolherFuncao(valor)
 moverParaZero(valor)
 
 
-println("Contando até zero:")
+print("Contando até zero:")
 while valor != 0 {
-    println("\(valor)... ")
+    print("\(valor)... ")
     valor = moverParaZero(valor)
 }
-println("Zero!")
+print("Zero!")
