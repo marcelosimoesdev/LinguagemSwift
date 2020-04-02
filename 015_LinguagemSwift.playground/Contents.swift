@@ -1,19 +1,15 @@
 // Linguagem Swift do básico ao avançado (Parte 15)
 
-
 // Enumerations (Enumerações)
 
 
-
 // Sintaxe definição
-
 // 1a forma:
 //enum OpcaoPagamento {
 //    case Mensal
 //    case Semestral
 //    case Anual
 //}
-
 // 2a forma:
 enum OpcaoPagamento {
     case Mensal, Semestral, Anual
@@ -34,7 +30,6 @@ pagamentoAluguel = .Semestral
 
 
 // Uso de "enums" no "switch"
-
 let valorTotal = 10_000.0
 var desconto = 0.0
 
@@ -47,11 +42,10 @@ case .Anual:
     desconto = 10.0
 }
 
-println("O valor do desconto será: \(valorTotal * (desconto/100))")
+print("O valor do desconto será: \(valorTotal * (desconto/100))")
 
 // Obs: É necessário colocar "case" para cada item do "enum", ou então definir um "default".
 // Exemplo:
-
 switch pagamentoAluguel {
 case .Anual:
     desconto = 10.0
@@ -62,7 +56,6 @@ default:
 
 
 // Associated Values (Valores associados)
-
 enum Algarismo {
     case Arabico(Int)
     case Romano(String)
@@ -74,15 +67,14 @@ numero = .Romano("XV")
 
 switch numero {
 case .Arabico(let valor):
-    println("O valor é \(valor)")
+    print("O valor é \(valor)")
 case .Romano(let valor):
-    println("O valor é \(valor)")
+    print("O valor é \(valor)")
 }
 
 
 
 // Raw Values
-
 // 1a forma:
 //enum Mes: Int {
 //    case Janeiro = 1
@@ -98,7 +90,6 @@ case .Romano(let valor):
 //    case Novembro = 11
 //    case Dezembro = 12
 //}
-
 // 2a forma:
 enum Mes: Int {
     case Janeiro = 1, Fevereiro, Marco, Abril, Maio, Junho, Julho, Agosto, Setembro, Outubro, Novembro, Dezembro
@@ -106,14 +97,12 @@ enum Mes: Int {
 
 
 let mesPagamento = Mes.Novembro
-println("O número do mês de pagamento é: \(mesPagamento.rawValue)")
+print("O número do mês de pagamento é: \(mesPagamento.rawValue)")
 
 // Inicializando a partir do "Raw value"
-
 let possivelMes = Mes(rawValue: 12)
-if let mes = possivelMes {
-    println("O mês foi encontrado")
+if possivelMes != nil {
+    print("O mês foi encontrado")
 } else {
-    println("Não existe mês correspondente para este número")
+    print("Não existe mês correspondente para este número")
 }
-
