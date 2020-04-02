@@ -1,7 +1,5 @@
 // Apple Swift Tutorial - Do básico ao avançado (Parte 12)
-
 // Functions (Funções 1/2)
-
 import Foundation
 
 
@@ -9,7 +7,7 @@ import Foundation
 // Função sem parâmetro e sem retorno
 func imprimirDataHoraNoLog() {
     
-    println(NSDate())
+    print(NSDate())
 }
 
 imprimirDataHoraNoLog()
@@ -19,20 +17,20 @@ imprimirDataHoraNoLog()
 // Função com parâmetro
 func imprimirMensagemNoLog(texto: String) {
     
-    println("Mensagem: \(texto)")
+    print("Mensagem: \(texto)")
 }
 
-imprimirMensagemNoLog("Minha string qualquer")
+imprimirMensagemNoLog(texto: "Minha string qualquer")
 
 
 
 // Função com mais de um parâmetro
 func imprimirSomaNumeros(numero1: Double, numero2: Double) {
     
-    println("O resultado da soma é: \(numero1 + numero2)")
+    print("O resultado da soma é: \(numero1 + numero2)")
 }
 
-imprimirSomaNumeros(5, 7)
+imprimirSomaNumeros(numero1: 5, numero2: 7)
 
 
 
@@ -42,19 +40,19 @@ func somarNumeros(numero1: Double, numero2: Double) -> Double {
     return numero1 + numero2
 }
 
-let resultado = somarNumeros(3, 2)
-println("O resultado da soma é: \(resultado)")
+let resultado = somarNumeros(numero1: 3, numero2: 2)
+print("O resultado da soma é: \(resultado)")
 
 
 
 // Função pode ter o retorno ignorado
 func imprimirESomarNumeros(numero1: Double, numero2: Double) -> Double {
     
-    println("O resultado da soma é: \(numero1 + numero2)")
+    print("O resultado da soma é: \(numero1 + numero2)")
     return numero1 + numero2
 }
 
-imprimirESomarNumeros(2, 4)
+imprimirESomarNumeros(numero1: 2, numero2: 4)
 
 
 
@@ -73,8 +71,8 @@ func minMax(array: [Int]) -> (minimo: Int, maximo: Int) {
     return (menorNumero, maiorNumero)
 }
 
-let extremos = minMax([4, 8, 3, 9, 11, 1, 2, 15])
-println("O menor número é \(extremos.minimo) e o maior é \(extremos.maximo)")
+let extremos = minMax(array: [4, 8, 3, 9, 11, 1, 2, 15])
+print("O menor número é \(extremos.minimo) e o maior é \(extremos.maximo)")
 
 
 
@@ -92,16 +90,16 @@ func concatenarStrings(array: [String]) -> String? {
     return resultado
 }
 
-if let texto1 = concatenarStrings(["Eu vou ", "juntar as ", "strings"]) {
-    println(texto1)
+if let texto1 = concatenarStrings(array: ["Eu vou ", "juntar as ", "strings"]) {
+    print(texto1)
 } else {
-    println("Não foi possível concatenar os itens do array")
+    print("Não foi possível concatenar os itens do array")
 }
 
-if let texto2 = concatenarStrings([]) {
-    println(texto2)
+if let texto2 = concatenarStrings(array: []) {
+    print(texto2)
 } else {
-    println("Não foi possível concatenar os itens do array")
+    print("Não foi possível concatenar os itens do array")
 }
 
 
@@ -109,11 +107,10 @@ if let texto2 = concatenarStrings([]) {
 // Nomeando parâmetros externos
 
 
-
 // Utilizando nomes diferentes
 func imprimirDetalhesFuncionario(nomeFuncionario nome: String, idadeFuncionario idade: Int) {
     
-    println("\nNome: \(nome) \nIdade: \(idade)")
+    print("\nNome: \(nome) \nIdade: \(idade)")
 }
 
 imprimirDetalhesFuncionario(nomeFuncionario: "João", idadeFuncionario: 29)
@@ -121,9 +118,9 @@ imprimirDetalhesFuncionario(nomeFuncionario: "João", idadeFuncionario: 29)
 
 
 // Utilizando o mesmo nome
-func imprimirDetalhesFuncionario(#nome: String, #idade: Int) {
+func imprimirDetalhesFuncionario(nome: String, idade: Int) {
     
-    println("\nNome: \(nome) \nIdade: \(idade)")
+    print("\nNome: \(nome) \nIdade: \(idade)")
 }
 
 imprimirDetalhesFuncionario(nome: "Maria", idade: 20)
@@ -136,9 +133,9 @@ func elevarNumero(numero: Double, potencia: Double = 2.0) -> Double {
     return pow(numero, potencia)
 }
 
-elevarNumero(5)
+elevarNumero(numero: 5)
 
-elevarNumero(2, potencia: 3)
+elevarNumero(numero: 2, potencia: 3)
 
 
 
@@ -153,45 +150,31 @@ func calcularMedia(numeros: Double...) -> Double {
     return soma / Double(numeros.count)
 }
 
-calcularMedia(1, 3)
+calcularMedia(numeros: 1, 3)
 
-calcularMedia(5, 10, 15, 20)
+calcularMedia(numeros: 5, 10, 15, 20)
 
 
 
 // Parâmetros Constantes x Variáveis
 
 
-
 // Constante por padrão
 func adicionarInterrogacoes1(texto: String) {
     
     //texto += "???"          // ERRO!
-    println(texto)
+    print(texto)
 }
-
-
-
-// Alterando para variável
-func adicionarInterrogacoes2(var texto: String) {
-    
-    texto += "???"
-    println(texto)
-}
-
-var pergunta1 = "Quem é"
-adicionarInterrogacoes2(pergunta1)
-pergunta1
 
 
 
 // Alterando para "inout"
-func adicionarInterrogacoes2(inout texto: String) {
+func adicionarInterrogacoes2(texto: inout String) {
     
     texto += "???"
-    println(texto)
+    print(texto)
 }
 
 var pergunta2 = "Quem é"
-adicionarInterrogacoes2(&pergunta2)
+adicionarInterrogacoes2(texto: &pergunta2)
 pergunta2
