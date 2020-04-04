@@ -1,3 +1,6 @@
+// Site: marcelosimoesdev.com
+// Instagram: @marcelosimoesdev
+
 // Linguagem Swift do básico ao avançado (Parte 14)
 // Closures
 

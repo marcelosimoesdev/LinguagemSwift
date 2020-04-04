@@ -1,3 +1,6 @@
+// Site: marcelosimoesdev.com
+// Instagram: @marcelosimoesdev
+
 // Apple Swift Tutorial - Do básico ao avançado (Parte 11)
 // Control Flow - Estruturas condicionais (if / switch)
 import Foundation

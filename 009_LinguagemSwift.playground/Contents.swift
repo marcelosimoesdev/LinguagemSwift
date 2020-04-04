@@ -1,3 +1,6 @@
+// Site: marcelosimoesdev.com
+// Instagram: @marcelosimoesdev
+
 // Apple Swift Tutorial - Do básico ao avançado (Parte 09)
 // Collection Types - Dictionaries (Dicionários)
 

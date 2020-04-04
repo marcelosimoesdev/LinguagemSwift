@@ -1,3 +1,7 @@
+// Site: marcelosimoesdev.com
+// Instagram: @marcelosimoesdev
+
+// Apple Swift Tutorial - Do básico ao avançado (Parte 03)
 // Type Aliases
 typealias IntSemSinal = UInt16
 let idade: IntSemSinal = 40

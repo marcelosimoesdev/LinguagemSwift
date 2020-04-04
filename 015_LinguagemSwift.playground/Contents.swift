@@ -1,6 +1,9 @@
+// Site: marcelosimoesdev.com
+// Instagram: @marcelosimoesdev
+
 // Linguagem Swift do básico ao avançado (Parte 15)
 
-// Enumerations (Enumerações)
+// Enumerations (Enumerações 1/2)
 
 
 // Sintaxe definição

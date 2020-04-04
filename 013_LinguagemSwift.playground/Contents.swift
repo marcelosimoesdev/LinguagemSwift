@@ -1,3 +1,6 @@
+// Site: marcelosimoesdev.com
+// Instagram: @marcelosimoesdev
+
 // Apple Swift Tutorial - Do básico ao avançado (Parte 13)
 // Functions (Funções 2/2)
 

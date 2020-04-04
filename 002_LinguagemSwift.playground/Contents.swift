@@ -1,3 +1,7 @@
+// Site: marcelosimoesdev.com
+// Instagram: @marcelosimoesdev
+
+// Apple Swift Tutorial - Do básico ao avançado (Parte 02)
 // Conceitos:
 // Integers
 var anoNascimento: Int = 1950

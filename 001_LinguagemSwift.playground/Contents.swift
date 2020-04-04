@@ -1,3 +1,8 @@
+// Site: marcelosimoesdev.com
+// Instagram: @marcelosimoesdev
+
+// Apple Swift Tutorial - Do básico ao avançado (Parte 01)
+
 /*
     Conceitos:
         - Variáveis x Constantes

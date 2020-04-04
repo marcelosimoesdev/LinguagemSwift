@@ -1,3 +1,7 @@
+// Site: marcelosimoesdev.com
+// Instagram: @marcelosimoesdev
+
+// Apple Swift Tutorial - Do básico ao avançado (Parte 04)
 // Conceitos:
 // Optionals
 var valor1: Int
