@@ -1,7 +1,7 @@
 // Site: marcelosimoesdev.com
 // Instagram: @marcelosimoesdev
 
-// Linguagem Swift do básico ao avançado (Parte 15)
+// Linguagem Swift do básico ao avançado (Parte 16)
 
 // Enumerations (Enumerações 2/2)
 
@@ -24,6 +24,20 @@ for fabricante in Fabricante.allCases {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Raw Values implícitos
 
 // Int
@@ -43,26 +57,36 @@ print(MesString.Agosto.rawValue) // Agosto
 
 
 
+
+
+
+
+
+
+
+
+
+
 // Enum recursivo
 
 
 // Primeira forma de declaração
-enum ExpressaoAritimetica {
-    case numero(Int)
-    indirect case adicao(ExpressaoAritimetica, ExpressaoAritimetica)
-    indirect case subtracao(ExpressaoAritimetica, ExpressaoAritimetica)
-    indirect case multiplicacao(ExpressaoAritimetica, ExpressaoAritimetica)
-    indirect case divisao(ExpressaoAritimetica, ExpressaoAritimetica)
-}
+//enum ExpressaoAritimetica1 {
+//    case numero(Int)
+//    indirect case adicao(ExpressaoAritimetica, ExpressaoAritimetica)
+//    indirect case subtracao(ExpressaoAritimetica, ExpressaoAritimetica)
+//    indirect case multiplicacao(ExpressaoAritimetica, ExpressaoAritimetica)
+//    indirect case divisao(ExpressaoAritimetica, ExpressaoAritimetica)
+//}
 
 // Segunda forma de declaração
-//indirect enum ExpressaoAritimetica {
-//    case numero(Int)
-//    case adicao(ExpressaoAritimetica, ExpressaoAritimetica)
-//    case subtracao(ExpressaoAritimetica, ExpressaoAritimetica)
-//    case multiplicacao(ExpressaoAritimetica, ExpressaoAritimetica)
-//    case divisao(ExpressaoAritimetica, ExpressaoAritimetica)
-//}
+indirect enum ExpressaoAritimetica {
+    case numero(Int)
+    case adicao(ExpressaoAritimetica, ExpressaoAritimetica)
+    case subtracao(ExpressaoAritimetica, ExpressaoAritimetica)
+    case multiplicacao(ExpressaoAritimetica, ExpressaoAritimetica)
+    case divisao(ExpressaoAritimetica, ExpressaoAritimetica)
+}
 
 func calcular(_ expressao: ExpressaoAritimetica) -> Int {
     
@@ -88,5 +112,3 @@ let ex4 = ExpressaoAritimetica.multiplicacao(ex1, ex3)
 calcular(ex1)
 calcular(ex3)
 calcular(ex4)
-
-
